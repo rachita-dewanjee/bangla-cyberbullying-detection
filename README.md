@@ -20,6 +20,31 @@ language processing and machine learning.
 | threat | 1,694 |
 
 The dataset is not included in this repository.
+## Results
+
+### Classical ML (uni-gram features)
+| Model | Accuracy | Precision | Recall | F1 |
+|---|---|---|---|---|
+| Logistic Regression | **79.24** | 83.24 | **73.23** | 76.65 |
+| Linear SVM | 78.15 | **83.79** | 73.17 | **76.85** |
+| Decision Tree | 74.10 | 74.32 | 71.59 | 72.79 |
+| Gradient Boosting | 70.42 | 78.64 | 61.68 | 65.68 |
+| Naive Bayes | 67.67 | 63.72 | 63.11 | 63.28 |
+
+### Deep learning (multi-class)
+| Model | Supervised embedding: Acc / F1 | Self-supervised embedding: Acc / F1 |
+|---|---|---|
+| GRU | **82 / 82** | 79 / 78 |
+| LSTM | 81 / 81 | 80 / 75 |
+| Hybrid CNN + Bi-LSTM | 78 / 79 | 80 / 79 |
+| Simple RNN | 72 / 65 | 77 / 73 |
+
+### Deep learning (binary, self-supervised embedding)
+| Model | Accuracy | Precision | Recall | F1 |
+|---|---|---|---|---|
+| GRU | **89** | 88 | 88 | **88** |
+
+**Best result:** GRU reached 89% accuracy and 88% F1 on binary classification.
 
 ## What the notebook does
 [`bangla_cyberbullying_detection.ipynb`](bangla_cyberbullying_detection.ipynb):
